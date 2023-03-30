@@ -7,21 +7,27 @@ namespace HW1_Dop
         private Matrix _matrix;
         private int _height;
         private int _width;
-        private int[,] _mat;
-        public FindHoles(int height, int width)
+        private int _depth;
+        private int[,,] _mat;
+        public FindHoles(int height, int width, int depth)
         {
             _height = height;
             _width = width;
+            _depth = depth;
         }        
         public void Holes()
         {
-            _matrix = new Matrix(_height, _width);
-            _mat = new int[_height,_width];
-            for (int i = 0; i < _matrix.FillMatrix().GetLength(0); i++)
+            _matrix = new Matrix(_height, _width, _depth);
+            _mat = new int[_height,_width, _depth];            
+            for (int x = 0; x < _matrix.FillMatrix().GetLength(0); x++)
             {
-                for (int j = 0; j < _matrix.FillMatrix().GetLength(1); j++)
+                for (int i = 0; i < _matrix.FillMatrix().GetLength(1); i++)
                 {
-                    _mat[i, j] = _matrix.FillMatrix()[i, j];
+                    for (int j = 0; j < _matrix.FillMatrix().GetLength(2); j++)
+                    {
+                        _mat[x,i, j] = _matrix.FillMatrix()[x,i, j];
+                    }
+                    
                 }
             }
 
@@ -31,86 +37,98 @@ namespace HW1_Dop
             string Сolumn = "";
             string DiagonalR = "";
             string DiagonalL = "";
-            for (int i = 0; i < _mat.GetLength(0); i++)
+            for (int x = 0; x < _mat.GetLength(0); x++)
             {
-                for (int j = 0; j < _mat.GetLength(1); j++)
+                for (int i = 0; i < _mat.GetLength(1); i++)
                 {
-                    Console.Write("{0,2}",_mat[i,j]);                    
-                    if (_mat[i,j]==0)
+                    for (int j = 0; j < _mat.GetLength(2); j++)
                     {
-                        num++;
-                    }
-                }
-                if (num==_width)
-                {
-                    Line = Line + Convert.ToString(i+1) + "; ";
-                }
-                Console.WriteLine();
-                num = 0;
-            }
-            num = 0;
-            for (int i = 0; i < _mat.GetLength(0); i++)
-            {
-                for (int j = 0; j < _mat.GetLength(1); j++)
-                {
-                    if (_mat[j,i]==0)
-                    {
-                        num++;
-                    }
-                }
-                if (num == _height)
-                {
-                    Сolumn = Сolumn + Convert.ToString(i + 1)+"; ";
-                }
-                Console.WriteLine();
-                num = 0;
-                
-            }
-            num = 0;
-            for (int i = 0; i < _mat.GetLength(0); i++)
-            {
-                for (int j = 0; j < _mat.GetLength(1); j++)
-                {                  
-                    
-                    if (_mat[i,j]==0)
-                    {
-                        if (jump==_height-1)
+                        if (_mat[x, i, j] == 0)
                         {
                             num++;
-                            jump = 0;
                         }
-                        
                     }
-                    jump++;                    
+                    if (num == _width)
+                    {
+                        Line = Line + "In layer number: " + Convert.ToString(x + 1) + " column number " + Convert.ToString(i + 1) +"; ";
+                    }
+                    Console.WriteLine();
+                    num = 0;
                 }
-                if (num == _height)
+            }
+           
+            num = 0;
+            for (int x = 0; x < _mat.GetLength(0); x++)
+            {
+                for (int i = 0; i < _mat.GetLength(1); i++)
                 {
-                    DiagonalR = "Right diagonal";
+                    for (int j = 0; j < _mat.GetLength(2); j++)
+                    {
+                        if (_mat[x,j, i] == 0)
+                        {
+                            num++;
+                        }
+                    }
+                    if (num == _height)
+                    {
+                        Сolumn = Сolumn + "In layer number: " + Convert.ToString(x + 1)+ " column number " + Convert.ToString(i + 1) + "; ";
+                    }
+                    Console.WriteLine();
+                    num = 0;
+
+                }
+            }
+            num = 0;
+            for (int x = 0; x < _mat.GetLength(0); x++)
+            {
+                for (int i = 0; i < _mat.GetLength(1); i++)
+                {
+                    for (int j = 0; j < _mat.GetLength(2); j++)
+                    {
+
+                        if (_mat[x,i, j] == 0)
+                        {
+                            if (jump == _height - 1)
+                            {
+                                num++;
+                                jump = 0;
+                            }
+
+                        }
+                        jump++;
+                    }
+                    if (num == _height)
+                    {
+                        DiagonalR = "In layer number: "+Convert.ToString(x + 1)+" Right diagonal; ";
+                    }
                 }
             }
             num = 0;
             jump = _height+1;
-            for (int i = 0; i < _mat.GetLength(0); i++)
+            for (int x = 0; x < _mat.GetLength(0); x++)
             {
-                for (int j = 0; j < _mat.GetLength(1); j++)
+                for (int i = 0; i < _mat.GetLength(1); i++)
                 {
-                    if (jump==0)
+                    for (int j = 0; j < _mat.GetLength(2); j++)
                     {
-                        jump = _height + 1;
-                    }
-                    if (jump==_height+1)
-                    {
-                        if (_mat[i,j]==0)
+                        if (jump == 0)
                         {
-                            num++;
+                            jump = _height + 1;
                         }
-                        
+                        if (jump == _height + 1)
+                        {
+                            if (_mat[x,i, j] == 0)
+                            {
+                                num++;
+                            }
+
+                        }
+                        jump--;
                     }
-                    jump--;
-                }
-                if (num == _height)
-                {
-                    DiagonalL = "Left diagonal";
+                    if (num == _height)
+                    {
+                        DiagonalL ="In layer number: "+ Convert.ToString(x + 1) + " Left diagonal; ";
+                    }
                 }
             }
             Console.WriteLine();            

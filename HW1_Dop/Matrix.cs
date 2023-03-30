@@ -5,22 +5,28 @@
         Random r = new Random();
         private int _height;
         private int _width;
-        public Matrix(int height, int width)
+        private int _depth;
+        public Matrix(int height, int width, int depth)
         {
             _height = height;
             _width = width;
+            _depth = depth;
         }
 
-        public int[,] FillMatrix()
+        public int[,,] FillMatrix()
         {            
-            int[,] matrix = new int[_height,_width];
-            for (int i = 0; i < matrix.GetLength(0); i++)
+            int[,,] matrix = new int[_height,_width, _depth];
+            for (int x = 0; x < matrix.GetLength(0); x++)
             {
-                for (int j = 0; j < matrix.GetLength(1); j++)
+                for (int i = 0; i < matrix.GetLength(1); i++)
                 {
-                    matrix[i, j] = r.Next(0,2);
+                    for (int j = 0; j < matrix.GetLength(2); j++)
+                    {
+                        matrix[x,i, j] = r.Next(0, 2);
+                    }
                 }
             }
+            
 
             return matrix;
         }
