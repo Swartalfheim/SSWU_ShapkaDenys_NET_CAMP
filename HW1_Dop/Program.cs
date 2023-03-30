@@ -4,7 +4,10 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            int  side= int.Parse(Console.ReadLine());            
+            PrintInfo printInfo = new PrintInfo(side,side);
+            printInfo.Info();
+
         }
     }
 }
