@@ -51,8 +51,7 @@ namespace HW1_Dop
                     if (num == _width)
                     {
                         Line = Line + "In layer number: " + Convert.ToString(x + 1) + " column number " + Convert.ToString(i + 1) +"; ";
-                    }
-                    Console.WriteLine();
+                    }                    
                     num = 0;
                 }
             }
@@ -72,10 +71,8 @@ namespace HW1_Dop
                     if (num == _height)
                     {
                         Сolumn = Сolumn + "In layer number: " + Convert.ToString(x + 1)+ " column number " + Convert.ToString(i + 1) + "; ";
-                    }
-                    Console.WriteLine();
+                    }                    
                     num = 0;
-
                 }
             }
             num = 0;
