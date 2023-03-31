@@ -8,15 +8,15 @@ namespace HW2
 {
     internal class Pump
     {
-        private double _power; // кіловати
-        private double _flowRate; // метри кубічні на годину
-        public Pump(double power, double flowRate)
+        private float _power; // кіловати
+        private float _flowRate; // метри кубічні на годину
+        public Pump(float power, float flowRate)
         {
             Power = power;
             FlowRate = flowRate;
         }
 
-        public double Power
+        public float Power
         {
             get
             {
@@ -33,7 +33,7 @@ namespace HW2
             }
         }
 
-        public double FlowRate
+        public float FlowRate
         {
             get
             {
@@ -50,7 +50,7 @@ namespace HW2
             }
         }
 
-        public double Work(double hours)
+        public float Work(double hours)
         {
             throw new NotImplementedException(); // повертає обсяг, вироблений за певний період часу
         }

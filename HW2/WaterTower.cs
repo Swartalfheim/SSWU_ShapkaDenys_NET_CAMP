@@ -69,7 +69,7 @@ namespace HW2
             throw new NotImplementedException();
         }
 
-        public void GiveWater(double hours)
+        public void GiveWater(float hours)
         {
             throw new NotImplementedException();
         }

@@ -9,15 +9,15 @@ namespace HW2
     internal class User
     {
         private static int nextId = 1;
-        private double _waterConsumption; // м^3/год
-        public User(double waterConsumption)
+        private float _waterConsumption; // м^3/год
+        public User(float waterConsumption)
         {
             Id = nextId++;
             WaterConsumption = waterConsumption;
         }
 
         public int Id { get; init; }
-        public double WaterConsumption
+        public float WaterConsumption
         {
             get
             {
