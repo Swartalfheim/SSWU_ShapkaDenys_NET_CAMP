@@ -4,7 +4,11 @@
     {
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            WaterTower waterTower = new WaterTower(50, new Pump(3, 10));
+            waterTower.ConnectUser(new User(0.3));
+            waterTower.ConnectUser(new User(3.3));
+            waterTower.ConnectUser(new User(0.9));
+            Console.WriteLine(waterTower.ToString());
         }
     }
 }
