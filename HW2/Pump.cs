@@ -50,7 +50,7 @@ namespace HW2
             }
         }
 
-        public float Work(double hours)
+        public float Work(float hours)
         {
             throw new NotImplementedException(); // повертає обсяг, вироблений за певний період часу
         }
