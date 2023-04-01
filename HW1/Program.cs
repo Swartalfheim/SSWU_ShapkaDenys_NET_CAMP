@@ -117,7 +117,7 @@ namespace HW1
                         }
                         Console.WriteLine();
                     }
-
+// алгоритмічно не добре. Також не слідкуєте за виходом за межі діапазону для лічильників
                     for (int i = 0; i < rows1; i++)
                     {
                         for (int j = 0; j < columns1; j++)
