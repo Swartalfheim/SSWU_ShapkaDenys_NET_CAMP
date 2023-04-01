@@ -4,6 +4,7 @@ namespace HW1
 {
     public class Program
     {//gqgweugwue
+        // ми домовлялись, що мислимо об'єктно-зорієнтовано і не покладаємо весь код в Main!!!!
         static void Main(string[] args)
         {
             Console.WriteLine("Натисьнiть цифру яка вiдповiдає завданню: 1-2");
@@ -31,11 +32,11 @@ namespace HW1
                         Console.Write("Введiть кiлькiсть стовбцiв: ");
                         result = int.TryParse(Console.ReadLine(), out columns);
                     } while (!result || columns <= 0);
-
+// 17 і 36 стрічку бажано об'єднати.
                     matrix = new int[rows, columns];
                     maxRowSteps = rows - 1;
                     maxColumnSteps = columns - 1;
-
+// на кожній ітерації є перевірка напрямку. Це неоптимально.
                     while (maxRowSteps > 0 || maxColumnSteps > 0)
                     {
                         matrix[r, c] = counter++;
