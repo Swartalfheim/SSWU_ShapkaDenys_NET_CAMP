@@ -5,26 +5,32 @@ namespace HW3
     public class Exercise1
     {
         private OriginalString _originalString;
-        private string[] _finalString;
+        private string _finalString;
         private string _find;
-        private string _result;
+        private int? _result;
         public Exercise1(string find)
         {
             _find = find;
         }
 
-        public string Treatment()
+        public int? Treatment()
         {
             _originalString = new OriginalString();
-            _finalString = _originalString.Original().Split(" ");
-            bool result = Regex.IsMatch(_finalString[1], _find);
+            _finalString = _originalString.Original();
+            bool result = Regex.IsMatch(_finalString, _find);
             if (result == false)
             {
-                _result = "null";
+                _result = null;
             }
             else
             {
-                _result = Convert.ToString(_finalString[1].IndexOf(_find));
+                int r = Convert.ToInt32(_finalString.IndexOf(_find));
+                _result = Convert.ToInt32(_finalString.IndexOf(_find, r + 1));
+            }
+
+            if (_result == -1)
+            {
+                _result = null;
             }
 
             return _result;
