@@ -16,7 +16,7 @@ namespace Task1
                 _lines.Add(readFile.ReadLine());
             }
 
-            readFile.Close();
+            readFile.Close(); // в мене зчитується з текстового файлу, але я продублював хардкодом і закоментував, щоб ви не змінювали посилання
             /*
             _lines = new List<string>()
             {
