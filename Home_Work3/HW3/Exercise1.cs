@@ -1,7 +1,7 @@
 ﻿using System.Text.RegularExpressions;
 
 namespace HW3
-{
+{//Трішки перестарався). Тут для завдання - краще один клас, а три різні методи.
     public class Exercise1
     {
         private OriginalString _originalString;
@@ -25,6 +25,7 @@ namespace HW3
             else
             {
                 int r = Convert.ToInt32(_finalString.IndexOf(_find));
+                //якщо r==-1, то наступна стрічка не потрібна...
                 _result = Convert.ToInt32(_finalString.IndexOf(_find, r + 1));
             }
 
