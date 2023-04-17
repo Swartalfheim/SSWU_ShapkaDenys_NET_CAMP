@@ -22,7 +22,7 @@ namespace Task1
             Console.WriteLine();
             for (int i = 0; i < _treatment.Processing().Count; i++)
             {
-                Console.WriteLine($"{i + 1}: {_treatment.Processing()[i]}");
+                Console.WriteLine($"{_treatment.Processing()[i]}");
             }
         }
     }

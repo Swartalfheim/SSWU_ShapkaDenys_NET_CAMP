@@ -25,7 +25,7 @@ namespace Task2
 
             i = 1;
             Console.WriteLine();
-            Console.WriteLine("Вивiд всiх рядкiв не є правильними але мiстять @");
+            Console.WriteLine("Вивiд всiх рядкiв якi мiстять @");
             foreach (var item in _treatment.Storage1())
             {
                 Console.WriteLine($"{i}: {item}");

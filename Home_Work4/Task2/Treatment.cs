@@ -11,6 +11,7 @@ namespace Task2
         private DataStorage _dataStorage;
         private List<string> _result;
         private char[] _submols;
+        private char[] _submolsd;
 
         public List<string> Storage()
         {
@@ -53,6 +54,7 @@ namespace Task2
                 }
             }
 
+            _submolsd = new char[] { ';', '(', ')', '<', '>', '[', ']', '\\', '_', '#', '$', '%', '^', '&' };
             /*Знаходимо чи є спецсимволи в домен*/
             int findex = 0;
             for (int i = 0; i < _dataStorage.Storage().Count; i++)
@@ -67,9 +69,12 @@ namespace Task2
 
                 for (int j = 0; j < _dataStorage.Storage()[i].Length; j++)
                 {
-                    if (j > findex && _dataStorage.Storage()[i][j] == '_')
+                    for (int x = 0; x < _submolsd.Length; x++)
                     {
-                        _result.Remove(_dataStorage.Storage()[i]);
+                        if (j > findex && _dataStorage.Storage()[i][j] == _submolsd[x] && _dataStorage.Storage()[i][j + 1] != '\"' && _dataStorage.Storage()[i][j - 1] != '\"')
+                        {
+                            _result.Remove(_dataStorage.Storage()[i]);
+                        }
                     }
                 }
             }
