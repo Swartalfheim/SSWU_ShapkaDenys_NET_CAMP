@@ -25,8 +25,8 @@
                     index = arr[i].IndexOfAny(_punctuations);
                     if (index != -1)
                     {
-                        _line.Add(arr[i].Substring(0, index + 1));
-                        arr[i] = arr[i].Substring(index + 1);
+                        _line.Add(arr[i][.. (index + 1)]);
+                        arr[i] = arr[i][(index + 1)..];
                         if (arr[i].Length == 0)
                         {
                             i++;
