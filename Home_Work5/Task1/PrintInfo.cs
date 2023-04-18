@@ -8,11 +8,23 @@ namespace Task1
 {
     public class PrintInfo
     {
+        private FencePerimeter _fencePerimeter;
         private Fence _fence;
+        private RecordingAndComparison _recordingAndComparison;
         public void Print()
         {
+            _fencePerimeter = new FencePerimeter();
             _fence = new Fence();
-            _fence.Treatment();
+            _recordingAndComparison = new RecordingAndComparison();
+            _recordingAndComparison.Recording();
+            Console.WriteLine($"Площа паркану {_fencePerimeter.Perimetr()}");
+            /*
+            Console.WriteLine("Координати за якими будується паркан");
+            foreach (var item in _fence.Treatment())
+            {
+                Console.WriteLine($"{item[0]} - {item[1]}");
+            }
+            */
         }
     }
 }
