@@ -51,7 +51,7 @@ namespace HW2
         }
 
         public float Work(float hours)
-        {
+        { // а де час?
             throw new NotImplementedException(); // повертає обсяг, вироблений за певний період часу
         }
 
