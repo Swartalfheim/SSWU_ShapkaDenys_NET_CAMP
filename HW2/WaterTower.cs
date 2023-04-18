@@ -15,6 +15,7 @@ namespace HW2
         {
             Volume = volume;
             pump = _pump;
+            
             Users = new List<User>();
         }
 
@@ -52,7 +53,7 @@ namespace HW2
                 _currentVolume = value;
             }
         }
-
+// порушення інкапсуляції
         public List<User> Users { get; set; }
         public void ConnectUser(User user)
         {
