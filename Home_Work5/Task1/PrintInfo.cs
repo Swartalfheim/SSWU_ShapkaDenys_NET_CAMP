@@ -18,13 +18,11 @@ namespace Task1
             _recordingAndComparison = new RecordingAndComparison();
             _recordingAndComparison.Recording();
             Console.WriteLine($"Площа паркану {_fencePerimeter.Perimetr()}");
-            /*
             Console.WriteLine("Координати за якими будується паркан");
             foreach (var item in _fence.Treatment())
             {
                 Console.WriteLine($"{item[0]} - {item[1]}");
             }
-            */
         }
     }
 }
