@@ -8,16 +8,14 @@ namespace Task1
 {
     public class Fence
     {
-        private ArrangementOfTrees _arrangementOfTrees;
-        public List<int[]> Treatment()
+        public List<int[]> Treatment(List<int[]> l)
         {
             int minX = 10;
             int maxX = 0;
             int minY = 10;
             int maxY = 0;
             List<int[]> list = new List<int[]>();
-            _arrangementOfTrees = new ArrangementOfTrees();
-            foreach (var item in _arrangementOfTrees.Arrangement())
+            foreach (var item in l)
             {
                 if (item[0] >= maxX)
                 {
@@ -40,7 +38,7 @@ namespace Task1
                 }
             }
 
-            foreach (var item in _arrangementOfTrees.Arrangement())
+            foreach (var item in l)
             {
                 if (item[0] == minX || item[0] == maxX || item[1] == minY || item[1] == maxY)
                 {
@@ -76,7 +74,7 @@ namespace Task1
 
             centerLU[0] = (bigestX[0] + bigestY[0]) / 2;
             centerLU[1] = (bigestX[1] + bigestY[1]) / 2;
-            foreach (var item in _arrangementOfTrees.Arrangement())
+            foreach (var item in l)
             {
                 if (item[0] < bigestY[0] && item[1] < bigestX[1] && item[0] <= centerLU[0] && item[1] <= centerLU[1])
                 {
@@ -108,7 +106,7 @@ namespace Task1
 
             centerLN[0] = (bigestX[0] + bigestY[0]) / 2;
             centerLN[1] = (bigestX[1] + bigestY[1]) / 2;
-            foreach (var item in _arrangementOfTrees.Arrangement())
+            foreach (var item in l)
             {
                 if (item[0] > bigestY[0] && item[1] < bigestX[1] && item[0] >= centerLN[0] && item[1] <= centerLN[1])
                 {
@@ -140,7 +138,7 @@ namespace Task1
 
             centerRU[0] = (bigestX[0] + bigestY[0]) / 2;
             centerRU[1] = (bigestX[1] + bigestY[1]) / 2;
-            foreach (var item in _arrangementOfTrees.Arrangement())
+            foreach (var item in l)
             {
                 if (item[0] < bigestY[0] && item[1] > bigestX[1] && item[0] <= centerRU[0] && item[1] >= centerRU[1])
                 {
@@ -172,7 +170,7 @@ namespace Task1
 
             centerRN[0] = (bigestX[0] + bigestY[0]) / 2;
             centerRN[1] = (bigestX[1] + bigestY[1]) / 2;
-            foreach (var item in _arrangementOfTrees.Arrangement())
+            foreach (var item in l)
             {
                 if (item[0] > bigestY[0] && item[1] > bigestX[1] && item[0] >= centerRN[0] && item[1] >= centerRN[1])
                 {

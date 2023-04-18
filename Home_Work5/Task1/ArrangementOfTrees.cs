@@ -27,5 +27,23 @@ namespace Task1
            };
             return _arr;
         }
+
+        public List<int[]> Arrangement1()
+        {
+            _arr = new List<int[]>()
+           {
+               new int[] { 1, 3 },
+               new int[] { 1, 7 },
+               new int[] { 2, 1 },
+               new int[] { 3, 4 },
+               new int[] { 5, 1 },
+               new int[] { 5, 6 },
+               new int[] { 5, 8 },
+               new int[] { 9, 9 },
+               new int[] { 8, 2 },
+               new int[] { 9, 5 }
+           };
+            return _arr;
+        }
     }
 }

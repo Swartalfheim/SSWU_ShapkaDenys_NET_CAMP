@@ -24,17 +24,17 @@ namespace Task1
 
             readFile.Close();
 
-            if (int.Parse(_lines[_lines.Count - 1]) > _perimeter.Perimetr())
+            if (int.Parse(_lines[_lines.Count - 1]) > _perimeter.Perimetr1())
             {
                 Console.WriteLine("Попереднiй паркан був бiльшим");
             }
 
-            if (int.Parse(_lines[_lines.Count - 1]) < _perimeter.Perimetr())
+            if (int.Parse(_lines[_lines.Count - 1]) < _perimeter.Perimetr1())
             {
                 Console.WriteLine("Теперешнiй паркан бiшьший");
             }
 
-            if (int.Parse(_lines[_lines.Count - 1]) == _perimeter.Perimetr())
+            if (int.Parse(_lines[_lines.Count - 1]) == _perimeter.Perimetr1())
             {
                 Console.WriteLine("Паркани однаковi");
             }
