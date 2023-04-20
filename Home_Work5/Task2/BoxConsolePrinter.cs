@@ -4,10 +4,10 @@
     {
         public static void PrintFullBoxInfo(Box box, int indent, int indentIncrement)
         {
-            Console.WriteLine($"{new string(' ', indent)}\"{box.Label}\" [Length: {box.Length}, Width: {box.Width}, Height: {box.Height}]");
+            Console.WriteLine($"{new string(' ', indent)}\"{box.Label}\" [Довжина: {box.Length}, Ширина: {box.Width}, Висота: {box.Height}]");
             if (box.Contents[0] is Box)
             {
-                Console.WriteLine($"{new string(' ', indent)}Inner boxes:");
+                Console.WriteLine($"{new string(' ', indent)}Внутрiшнi ящики:");
             }
 
             foreach (object item in box.Contents)

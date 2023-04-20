@@ -22,7 +22,7 @@
                 {
                     foreach (Product product in department.Products)
                     {
-                        Console.WriteLine($"{new string(' ', indent + indentIncrement)}{product.Name} [Length: {product.Length}, Width: {product.Width}, Height: {product.Height}]");
+                        Console.WriteLine($"{new string(' ', indent + indentIncrement)}{product.Name} [Длина: {product.Length}, Ширина: {product.Width}, Висота: {product.Height}]");
                     }
                 }
                 else
