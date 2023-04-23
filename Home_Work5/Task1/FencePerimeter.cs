@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Task1
 {
     public class FencePerimeter
-    {
+    {// Ви в поля вносите часто змінні, які могли б бути просто результатом одного з методів
         private Fence _fence;
         private int _perimeter;
         private ArrangementOfTrees _arrangementOfTrees;
@@ -46,7 +46,7 @@ namespace Task1
             File.WriteAllText("E:\\SSWU_ShapkaDenys_NET_CAMP\\Home_Work5\\Task1\\log.txt", p);
             return _perimeter;
         }
-
+// Не зрозуміли тему перевантаження операцій!!!
         public bool Less()
         {
             return Perimetr1() < Perimetr();
