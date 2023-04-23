@@ -23,6 +23,7 @@
             List<Product> allProducts = store.GetAllProducts();
             List<Product> boughtProducts = new List<Product>();
             Random random = new Random();
+            // Не зрозумілий варіант.
             foreach (Product product in allProducts)
             {
                 for (int i = 0; i < random.Next(1, 5 + 1); i++)
