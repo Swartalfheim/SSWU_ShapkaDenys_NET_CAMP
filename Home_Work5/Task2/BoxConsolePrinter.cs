@@ -1,5 +1,5 @@
 ﻿namespace Task2
-{
+{// Цей підхід не до кінця правильний. Хоча початкова ідея добра.
     public static class BoxConsolePrinter
     {
         public static void PrintFullBoxInfo(Box box, int indent, int indentIncrement)
