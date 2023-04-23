@@ -12,6 +12,7 @@ namespace Task3
         public List<string[]> StorageALL()
         {
             _lines = new List<string[]>();
+            // Передавайте шлях до файлу через параметр методу
             FileStream file = new FileStream("E:\\SSWU_ShapkaDenys_NET_CAMP\\Home_Work4\\Task3\\text.txt", FileMode.Open);
             StreamReader readFile = new StreamReader(file);
             while (!readFile.EndOfStream)
