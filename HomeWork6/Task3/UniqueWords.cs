@@ -21,5 +21,17 @@ namespace Task3
                 }
             }
         }
+
+        public IEnumerable<string> NUniquewords(string text)
+        {
+            string[] words = text.ToLower().Split(',', '-', '.', '“', '”', ' ');
+            foreach (var item in words)
+            {
+                if (words.Where(q => q == item).Count() == 1)
+                {
+                    yield return item;
+                }
+            }
+        }
     }
 }
