@@ -9,6 +9,7 @@ namespace Task1
         public List<string> Storage()
         {
             _lines = new List<string>();
+            //Не варто прикріплюватись до одного файлу.
             FileStream file = new FileStream("E:\\SSWU_ShapkaDenys_NET_CAMP\\Home_Work4\\Task1\\test.txt", FileMode.Open);
             StreamReader readFile = new StreamReader(file);
             while (!readFile.EndOfStream)

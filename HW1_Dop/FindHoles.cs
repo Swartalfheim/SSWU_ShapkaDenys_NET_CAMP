@@ -1,7 +1,7 @@
 ﻿using System;
 
 namespace HW1_Dop
-{
+{// Існує можливість оптимізувати код, аде Ви бачите, що він алгоритмічно подібний на 3 частинах.
     public class FindHoles
     {
         private Matrix _matrix;
@@ -10,7 +10,7 @@ namespace HW1_Dop
         private int _depth;
         private int[,,] _mat;
         public FindHoles(int height, int width, int depth)
-        {
+        {// конструктор повинен ініціалізовувати ВСІ поля класу!!!
             _height = height;
             _width = width;
             _depth = depth;
@@ -49,7 +49,7 @@ namespace HW1_Dop
                         }
                     }
                     if (num == _width)
-                    {
+                    {// краще вказати координати кінців відрізка(всі три)
                         Line = Line + "In layer number: " + Convert.ToString(x + 1) + " column number " + Convert.ToString(i + 1) +"; ";
                     }                    
                     num = 0;

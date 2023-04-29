@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace Task1
-{
+{//Ви не зрозуміли складності задачі. У нас не дано крайні дерева, а нам самим треба знайти їх. 
     public class ArrangementOfTrees
     {
         private List<int[]> _arr;
