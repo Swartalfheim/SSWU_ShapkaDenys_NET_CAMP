@@ -9,7 +9,7 @@ namespace Task2
     public class NewArray
     {
         public IEnumerable<int> NewNumbers(params int[][] arrays)
-        {
+        {// Заплутались в 3 соснах. Залиштеся, щоб я пояснила.
             int[] mins = new int[arrays.Length];
             int max = arrays.Select(m => m.Max()).Max();
             List<int> sorted = new List<int>(); // to check if a minimum was already output
