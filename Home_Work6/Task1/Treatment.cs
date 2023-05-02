@@ -13,6 +13,8 @@ namespace Task1
         }
 
         public int Size { get; private set; }
+        // Втомилась вже розказувати за інкапсуляцію колекцій((((
+        // 2До діагоналі і після діагоналі різні закони зміни індексів...
         public int[,] Matrix { get; set; }
         public IEnumerator<int> GetEnumerator()
         {
