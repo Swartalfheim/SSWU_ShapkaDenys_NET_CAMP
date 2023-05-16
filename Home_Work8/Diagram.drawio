@@ -1,0 +1,183 @@
+<mxfile host="app.diagrams.net" modified="2023-05-16T23:27:44.974Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="OAdEoLFhd5mVvItqGGfd" version="21.3.2" type="device">
+  <diagram name="Страница 1" id="cgj3FhXHCanbjXkyZmL-">
+    <mxGraphModel dx="2607" dy="1389" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-1" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ITrafficLight&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ &amp;lt;get&amp;gt; Id: int&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; TrafficDirection: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; ControlledDirections: List&amp;lt;TrafficLightControlledDirections&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; StateDurations: Dictionary&amp;lt;TrafficLightStates, int&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; State: TrafficLightStates&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; Timer: int&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Update: void&lt;br&gt;+ SwitchState: void&lt;/p&gt;&amp;nbsp;+ ChangeStateDuration: bool" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1560" y="970" width="400" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-2" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ICloneable&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Clone: object&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="550" y="890" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-3" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ITimer&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Start: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Stop: void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Pause: void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="200" y="1530" width="200" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-4" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IRoadLane&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ &amp;lt;get&amp;gt; Id: int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; TrafficLights: List&amp;lt;ITrafficLight&amp;gt;?&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ &amp;lt;get&amp;gt; TrafficDirection: string&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddTrafficLight: void&lt;br&gt;+ GetTrafficLight: ITrafficLight?&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="1060" width="280" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;IRoad&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; Id: int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; Lanes: List&amp;lt;IRoadLane&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddLane: void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="250" y="1030" width="240" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-6" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ICrossroadSimulator&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ &amp;lt;get&amp;gt; Roads: List&amp;lt;IRoad&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddRoad: void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="160" y="1280" width="280" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-7" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ISimulatorManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ GetRoads: List&amp;lt;IRoad&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ AddRoad: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddRoadLane: bool&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddTrafficLight: bool&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ ChangeTrafficLightStateDuration: string&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="160" y="1769" width="280" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-8" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;Interface&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;ISimulatorVisualizer&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; Manager: ISimulatorManager&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Simulate: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ PrintTrafficLightData: void&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ ChangeTrafficLightStateDuration: void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1210" y="1510" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-9" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;Road&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;u&gt;-&amp;nbsp;_nextId: int&lt;/u&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; Id: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; Id: int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; Lanes: List&amp;lt;IRoadLane&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; Lanes: List&amp;lt;IRoadLane&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddLane: void&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Clone: object&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="890" y="1110" width="240" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-10" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;TrafficLight&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;u style=&quot;border-color: var(--border-color);&quot;&gt;-&amp;nbsp;_nextId: int&lt;/u&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;border-color: var(--border-color);&quot;&gt;-&amp;nbsp;_nextState: TrafficLightStates&lt;/span&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ &amp;lt;get&amp;gt; Id: int&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; Id: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; TrafficDirection: int&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; TrafficDirection: int&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; ControlledDirections: List&amp;lt;TrafficLightControlledDirections&amp;gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; ControlledDirections: List&amp;lt;TrafficLightControlledDirections&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; StateDurations: Dictionary&amp;lt;TrafficLightStates, int&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; StateDurations: Dictionary&amp;lt;TrafficLightStates, int&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; State: TrafficLightStates&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; State: TrafficLightStates&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; Timer: int&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- &amp;lt;set&amp;gt; Timer: int&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Update: void&lt;br&gt;+ SwitchState: void&lt;/p&gt;&amp;nbsp;+ ChangeStateDuration: bool&lt;br&gt;&amp;nbsp;+ Clone: object" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1560" y="1590" width="400" height="340" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-11" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;RoadLane&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ &amp;lt;get&amp;gt; Id: int&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- &amp;lt;set&amp;gt; Id: int&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ &amp;lt;get&amp;gt; TrafficLights: List&amp;lt;ITrafficLight&amp;gt;?&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- &amp;lt;set&amp;gt; TrafficLights: List&amp;lt;ITrafficLight&amp;gt;?&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ &amp;lt;get&amp;gt; TrafficDirection: string&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- &amp;lt;set&amp;gt; TrafficDirection: string&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddTrafficLight: void&lt;br&gt;+ GetTrafficLight: ITrafficLight?&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ Clone: object&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="1280" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-12" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;CrossroadSimulator&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;-&amp;nbsp;_timer:&amp;nbsp;System.Timers.Timer?&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;+ &amp;lt;get&amp;gt; Roads: List&amp;lt;IRoad&amp;gt;&lt;/span&gt;&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; Roads: List&amp;lt;IRoad&amp;gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ AddRoad: void&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Start: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Stop: void&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Pause: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- OnElapsed: void&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="520" y="1280" width="280" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-14" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;SimulatorManager&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- &amp;lt;readonly&amp;gt; _crossroadSimulator: ICrossroadSimulator&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;- &amp;lt;readonly&amp;gt; _onTrafficLightUpdate: Action&amp;lt;ITrafficLight&amp;gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Start: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Stop: void&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Pause: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ GetRoads: List&amp;lt;IRoad&amp;gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;+ AddRoad: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ AddRoadLane: bool&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ AddTrafficLight: bool&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ ChangeTrafficLightStateDuration: string&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="480" y="1769" width="360" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-15" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;b&gt;ConsoleSimulatorManager&lt;/b&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ &amp;lt;get&amp;gt; Manager: ISimulatorManager&lt;br&gt;&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;- &amp;lt;set&amp;gt; Manager: ISimulatorManager&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ Simulate: void&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ PrintTrafficLightData: void&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px;&quot;&gt;+ ChangeTrafficLightStateDuration: void&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="1210" y="1739" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-20" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" target="NIREH0QWhQl2Gp1tPwjf-5" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="890" y="1190" as="sourcePoint" />
+            <mxPoint x="1020" y="1230" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="890" y="1190" />
+              <mxPoint x="370" y="1190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-21" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-11" target="NIREH0QWhQl2Gp1tPwjf-4" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1010" y="1270" as="sourcePoint" />
+            <mxPoint x="1170" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-22" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-10" target="NIREH0QWhQl2Gp1tPwjf-1" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1010" y="1270" as="sourcePoint" />
+            <mxPoint x="1170" y="1270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-24" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-5" target="NIREH0QWhQl2Gp1tPwjf-2" edge="1">
+          <mxGeometry x="0.4074" width="160" relative="1" as="geometry">
+            <mxPoint x="990" y="960" as="sourcePoint" />
+            <mxPoint x="1150" y="960" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="370" y="920" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-25" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-1" target="NIREH0QWhQl2Gp1tPwjf-2" edge="1">
+          <mxGeometry x="0.0933" width="160" relative="1" as="geometry">
+            <mxPoint x="1570" y="830" as="sourcePoint" />
+            <mxPoint x="1730" y="830" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1760" y="915" />
+              <mxPoint x="1610" y="915" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-26" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-4" target="NIREH0QWhQl2Gp1tPwjf-2" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1060" y="1020" as="sourcePoint" />
+            <mxPoint x="1220" y="1020" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1340" y="1030" />
+              <mxPoint x="650" y="1030" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-27" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-12" target="NIREH0QWhQl2Gp1tPwjf-9" edge="1">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="770" y="1240" as="sourcePoint" />
+            <mxPoint x="930" y="1240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1010" y="1338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-32" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=-0.001;entryY=0.36;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-9" edge="1">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="1120" y="1338" as="sourcePoint" />
+            <mxPoint x="1200" y="1338" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1130" y="1338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-36" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" parent="1" edge="1" target="NIREH0QWhQl2Gp1tPwjf-10">
+          <mxGeometry x="-1" y="3" relative="1" as="geometry">
+            <mxPoint x="1480" y="1338" as="sourcePoint" />
+            <mxPoint x="1560" y="1338" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1560" y="1338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-38" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-12" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="820" y="1410" as="sourcePoint" />
+            <mxPoint x="440" y="1338" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-40" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0.999;entryY=0.382;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-14" target="NIREH0QWhQl2Gp1tPwjf-7" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="820" y="1410" as="sourcePoint" />
+            <mxPoint x="490" y="1660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-41" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-6" target="NIREH0QWhQl2Gp1tPwjf-3" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="520" y="1600" as="sourcePoint" />
+            <mxPoint x="980" y="1410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-42" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-7" target="NIREH0QWhQl2Gp1tPwjf-3" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="820" y="1410" as="sourcePoint" />
+            <mxPoint x="980" y="1410" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-43" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-14" target="NIREH0QWhQl2Gp1tPwjf-12" edge="1">
+          <mxGeometry x="-0.9199" y="-10" relative="1" as="geometry">
+            <mxPoint x="680" y="1660" as="sourcePoint" />
+            <mxPoint x="980" y="1670" as="targetPoint" />
+            <mxPoint y="1" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-44" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="665" y="1510" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-45" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-15" target="NIREH0QWhQl2Gp1tPwjf-8" edge="1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="1070" y="1670" as="sourcePoint" />
+            <mxPoint x="1230" y="1670" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-51" value="1" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=1;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.998;entryY=0.162;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryPerimeter=0;" parent="1" source="NIREH0QWhQl2Gp1tPwjf-15" target="NIREH0QWhQl2Gp1tPwjf-14" edge="1">
+          <mxGeometry x="-0.4998" y="-10" relative="1" as="geometry">
+            <mxPoint x="960" y="1770.0499999999997" as="sourcePoint" />
+            <mxPoint x="880" y="1770" as="targetPoint" />
+            <Array as="points" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NIREH0QWhQl2Gp1tPwjf-52" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="880" y="1739" width="30" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
