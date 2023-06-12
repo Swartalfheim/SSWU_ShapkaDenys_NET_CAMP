@@ -1,4 +1,4 @@
-﻿namespace HW11
+﻿namespace HW11_2
 {
     internal class Program
     {
