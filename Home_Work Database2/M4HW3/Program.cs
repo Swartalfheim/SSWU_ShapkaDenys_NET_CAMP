@@ -50,7 +50,7 @@ namespace M4HW3
                     Console.WriteLine($"Name {item.Name}");
                 }
                 manager.Add(new Languagegroup() { Name = "S" });
-                manager.Modify(new Languagegroup() { LanguagegroupId = 2, Name = "fxgh" });
+                manager.Modify(new Languagegroup() { LanguagegroupId = 2, Name = "also Arabic" });
                 var query2 = db.Languagegroup.Select(
                     a => new
                     {
