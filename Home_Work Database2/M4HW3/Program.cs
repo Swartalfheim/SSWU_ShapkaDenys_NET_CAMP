@@ -80,7 +80,7 @@ namespace M4HW3
                         a.Population,
                         a.Area
                     });
-                Console.WriteLine("Output of all Countries without removing: \n");
+                Console.WriteLine("Output of all Countries with removing: \n");
                 foreach (var item in query1)
                 {
                     Console.WriteLine(
