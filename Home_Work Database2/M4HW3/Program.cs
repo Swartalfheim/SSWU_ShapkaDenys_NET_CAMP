@@ -89,8 +89,6 @@ namespace M4HW3
                          $"Population: {item.Population}\n" +
                           $"Area: {item.Area}\n");
                 }
-                Console.WriteLine("Also output of changed and added language groups: \n");
-                
             }
         }
     }
