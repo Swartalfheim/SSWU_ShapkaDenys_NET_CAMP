@@ -49,7 +49,14 @@ namespace M4HW3
                 {
                     Console.WriteLine($"Name {item.Name}");
                 }
-                manager.Add(new Languagegroup() { Name = "S" });
+                Console.WriteLine("\nOutput of without changes and added language groups: \n");
+                var users5 = db.Languagegroup.FromSqlRaw("Select * From [dbo].[Languagegroup]").ToList();
+                foreach (var item in users5)
+                {
+                    Console.WriteLine($"Name {item.Name}");
+                }
+
+                manager.Add(new Languagegroup() { Name = "Shumer" });
                 manager.Modify(new Languagegroup() { LanguagegroupId = 2, Name = "also Arabic" });
                 var query2 = db.Languagegroup.Select(
                     a => new
@@ -57,7 +64,7 @@ namespace M4HW3
                         a.LanguagegroupId,
                         a.Name
                     });
-                Console.WriteLine("Output of changed and added language groups: \n");
+                Console.WriteLine("\nOutput of changed and added language groups: \n");
                 foreach (var item in query2)
                 {
                     Console.WriteLine(
@@ -82,6 +89,8 @@ namespace M4HW3
                          $"Population: {item.Population}\n" +
                           $"Area: {item.Area}\n");
                 }
+                Console.WriteLine("Also output of changed and added language groups: \n");
+                
             }
         }
     }
