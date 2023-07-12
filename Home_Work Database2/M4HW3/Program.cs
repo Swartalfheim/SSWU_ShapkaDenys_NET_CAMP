@@ -64,7 +64,7 @@ namespace M4HW3
                         a.LanguagegroupId,
                         a.Name
                     });
-                Console.WriteLine("\nOutput of changed and added language groups: \n");
+                Console.WriteLine("Output of changed and added language groups: \n");
                 foreach (var item in query2)
                 {
                     Console.WriteLine(
